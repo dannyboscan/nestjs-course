@@ -21,8 +21,13 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
+5. Llenar Base de Datos por medio del seed
+```shell
+curl -o /dev/null http://localhost:9000/api/seed/
+```
+
 ## Stack utilizado
-* MongoDB
+* MongoDB (mongodb://localhost:27018/nest-pokemon)
 * NestJS
 
 
