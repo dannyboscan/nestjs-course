@@ -21,13 +21,25 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Llenar Base de Datos por medio del seed
+5. Copiar el archivo ```.env.template``` a ```.env```
+```shell
+cp .env.template .env
+```
+
+6. Completar las variables de entornos definidas en el archivo ```.env```
+
+7. Levantar proyecto en modo desarrollo
+```shell
+yarn start:dev
+```
+
+8. Llenar Base de Datos por medio del seed
 ```shell
 curl -o /dev/null http://localhost:9000/api/seed/
 ```
 
 ## Stack utilizado
-* MongoDB (mongodb://localhost:27018/nest-pokemon)
+* MongoDB
 * NestJS
 
 
