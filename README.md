@@ -38,6 +38,25 @@ yarn start:dev
 curl -o /dev/null http://localhost:9000/api/seed/
 ```
 
+## Construcción de contenedores como producción
+1. Crear archivo de environment para producción con sus valores correspondientes ```.env.prod````
+2. Crear la imagen
+### Build
+```shell
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+### Run
+```shell
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
+
+### Nota
+Por defecto, __docker-compose__ usa el archivo ```.env```, por lo que si tienen el archivo .env y lo configuran con sus variables de entorno de producción, bastaría con
+```shell
+docker-compose -f docker-compose.prod.yaml up --build
+```
+
 ## Stack utilizado
 * MongoDB
 * NestJS
